@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Throw Physics Ball</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #111;
+}
+
+#ball {
+    width: 60px;
+    height: 60px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    cursor: grab;
+}
+</style>
+
+<script>
+let ball;
+
+let x = 200;
+let y = 200;
+
+let velocityX = 0;
+let velocityY = 0;
+
+let gravity = 0.6;
+let bounceLoss = 0.8;
+let friction = 0.995;
+
+let isDragging = false;
+
+let lastMouseX, lastMouseY;
+let lastTime;
+
+function animate() {
+
+    if (!isDragging) {
+
+        velocityY += gravity;
+
+        x += velocityX;
+        y += velocityY;
+
+        // Floor collision
+        if (y + 60 >= window.innerHeight) {
+            y = window.innerHeight - 60;
+            velocityY = -velocityY * bounceLoss;
+            velocityX *= friction;
+        }
+
+        // Ceiling
+        if (y <= 0) {
+            y = 0;
+            velocityY = -velocityY * bounceLoss;
+        }
+
+        // Right wall
+        if (x + 60 >= window.innerWidth) {
+            x = window.innerWidth - 60;
+            velocityX = -velocityX * bounceLoss;
+        }
+
+        // Left wall
+        if (x <= 0) {
+            x = 0;
+            velocityX = -velocityX * bounceLoss;
+        }
+
+        ball.style.left = x + "px";
+        ball.style.top = y + "px";
+    }
+
+    requestAnimationFrame(animate);
+}
+
+window.onload = function() {
+
+    ball = document.getElementById("ball");
+    animate();
+
+    ball.addEventListener("mousedown", function(e) {
+        isDragging = true;
+        ball.style.cursor = "grabbing";
+        velocityX = 0;
+        velocityY = 0;
+
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+        lastTime = Date.now();
+    });
+
+    document.addEventListener("mousemove", function(e) {
+        if (isDragging) {
+
+            x = e.clientX - 30;
+            y = e.clientY - 30;
+
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+
+            let currentTime = Date.now();
+            let timeDiff = currentTime - lastTime;
+
+            if (timeDiff > 0) {
+                velocityX = (e.clientX - lastMouseX) / timeDiff * 15;
+                velocityY = (e.clientY - lastMouseY) / timeDiff * 15;
+            }
+
+            lastMouseX = e.clientX;
+            lastMouseY = e.clientY;
+            lastTime = currentTime;
+        }
+    });
+
+    document.addEventListener("mouseup", function() {
+        if (isDragging) {
+            isDragging = false;
+            ball.style.cursor = "grab";
+        }
+    });
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="ball"></div>
+
+</body>
+</html>

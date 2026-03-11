@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline JavaScript Demo</title>
+</head>
+<body>
+  <h1>Inline JavaScript</h1>
+  <p>Name: Raymond Jean L. Bool</p>
+
+  <!-- INLINE JAVASCRIPT -->
+  <button onclick="showMessage()">Click Me</button>
+  <p id="message">Nothing yet.</p>
+
+  <script>
+    function showMessage() {
+      const textElement = document.getElementById("message");
+      textElement.innerHTML = "Hello LBYCPG3! JavaScript is connected!";
+    }
+  </script>
+</body>
+</html>

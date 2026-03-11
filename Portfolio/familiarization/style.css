@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* MAIN CONTAINER */
+.main-container{
+    width: 900px;
+    margin: auto;
+    background: #f4c430;
+    padding: 30px;
+}
+
+/* TITLE */
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* GRID LAYOUT */
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+}
+
+/* FLEX CONTAINER */
+.flex-box{
+    background:#1f6f78;
+    padding:20px;
+    display:flex;
+}
+
+/* BOX ITEMS */
+.box{
+    width:50px;
+    height:50px;
+    margin:5px;
+}
+
+.yellow{
+    background:#ffe066;
+}
+
+.pink{
+    background:#d63384;
+}
+
+.green{
+    background:#69db7c;
+}
+
+/* JUSTIFY CONTENT VALUES */
+.start{
+    justify-content:flex-start;
+}
+
+.end{
+    justify-content:flex-end;
+}
+
+.center{
+    justify-content:center;
+}
+
+.around{
+    justify-content:space-around;
+}
+
+.between{
+    justify-content:space-between;
+}
+
+.evenly{
+    justify-content:space-evenly;
+}
+
+
+.label{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:8px;
+}

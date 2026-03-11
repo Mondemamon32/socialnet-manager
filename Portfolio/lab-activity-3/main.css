@@ -1,0 +1,87 @@
+/* ============================= */
+/* Global Styling */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;   /* dark background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================= */
+/* Resume Container */
+/* ============================= */
+
+.resume-container {
+    width: 70%;
+    margin: 40px auto;
+    padding: 40px;
+    background: #1f1f1f;         /* dark gray box */
+    color: white;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    .resume-container h1,
+    .resume-container h2,
+    .resume-container h3,
+    .resume-container p,
+    .resume-container li,
+    .resume-container ul,
+    .resume-container span {
+    color: white;
+}
+
+}
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.resume-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/* ============================= */
+/* Sections */
+/* ============================= */
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    background: black;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* ============================= */
+/* Lists */
+/* ============================= */
+
+.section ul {
+    margin-top: 10px;
+}
+
+.section li {
+    margin-bottom: 8px;
+}
+a {
+    color: #00bfff;      /* light blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

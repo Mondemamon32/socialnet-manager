@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internal JavaScript Demo</title>
+</head>
+<body>
+  <h1>Internal JavaScript</h1>
+  <p>Name: Raymond Jean L. Bool</p>
+
+  <button id="myButton">Click Me</button>
+  <p id="message">Nothing yet.</p>
+
+  <!-- INTERNAL JAVASCRIPT -->
+  <script>
+    const button = document.getElementById("myButton");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", () => {
+      message.textContent = "Hello LBYCPG3! JavaScript is connected!";
+    });
+  </script>
+</body>
+</html>

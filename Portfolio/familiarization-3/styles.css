@@ -1,0 +1,37 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* MODIFIED BUTTON COLOR */
+.my-button {
+  background-color: #3498db; /* changed color */
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: #2980b9;
+}
+
+.my-button.active {
+  background-color: #e74c3c;
+  transform: scale(1.1);
+}
+
+.message-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: none;
+}
+
+.message-box.show {
+  display: block;
+}
