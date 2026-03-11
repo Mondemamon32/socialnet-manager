@@ -51,8 +51,17 @@ overflow-y:auto;
 }
 
 .friend-entry{
+display:flex;
+align-items:center;
+gap:8px;
 padding:4px;
-border-bottom:1px solid #eee;
+}
+
+.friend-entry img{
+width:32px;
+height:32px;
+border-radius:50%;
+object-fit:cover;
 }
 
 #status-bar{

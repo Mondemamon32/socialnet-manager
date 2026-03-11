@@ -74,7 +74,7 @@ async function loadProfiles(){
 
 const {data,error} = await db
 .from("profiles")
-.select("id,name")
+.select("id,name,picture")
 .order("name")
 
 if(error){
@@ -87,21 +87,33 @@ list.innerHTML = ""
 
 data.forEach(profile=>{
 
-const div = document.createElement("div")
+const row = document.createElement("div")
 
-div.className = "profile-item"
-div.textContent = profile.name
-div.dataset.id = profile.id
+row.className = "profile-item d-flex align-items-center gap-2"
+row.dataset.id = profile.id
 
-div.onclick = ()=> selectProfile(profile.id)
+// profile image
+const img = document.createElement("img")
+img.src = profile.picture || "resources/images/default.png"
+img.width = 32
+img.height = 32
+img.style.borderRadius = "50%"
+img.style.objectFit = "cover"
 
-list.appendChild(div)
+// profile name
+const name = document.createElement("span")
+name.textContent = profile.name
+
+row.appendChild(img)
+row.appendChild(name)
+
+row.onclick = () => selectProfile(profile.id)
+
+list.appendChild(row)
 
 })
 
 }
-
-
 
 // ===============================
 // SELECT PROFILE
@@ -283,7 +295,7 @@ const {data,error} = await db
 .from("friends")
 .select(`
 friend_id,
-profiles:friend_id (name)
+profiles:friend_id (name, picture)
 `)
 .eq("profile_id",profileId)
 
@@ -302,13 +314,22 @@ return
 
 data.forEach(friend=>{
 
-const div = document.createElement("div")
+const row = document.createElement("div")
+row.className = "friend-entry d-flex align-items-center gap-2"
 
-div.className="friend-entry"
+const img = document.createElement("img")
+img.src = friend.profiles.picture || "resources/images/default.png"
+img.width = 32
+img.height = 32
+img.style.borderRadius = "50%"
 
-div.textContent = friend.profiles.name
+const name = document.createElement("span")
+name.textContent = friend.profiles.name
 
-list.appendChild(div)
+row.appendChild(img)
+row.appendChild(name)
+
+list.appendChild(row)
 
 })
 
@@ -329,7 +350,7 @@ const name = document.getElementById("input-friend").value.trim()
 
 const {data} = await db
 .from("profiles")
-.select("id,name")
+.select("id,name,picture")
 .ilike("name",name)
 .limit(1)
 
