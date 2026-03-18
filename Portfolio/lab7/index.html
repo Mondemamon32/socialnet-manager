@@ -5,42 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SocialNet Manager</title>
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-rel="stylesheet">
-
-<!-- Custom CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
-<!-- Supabase CDN -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 </head>
+
 <body>
 
 <header class="app-header text-center">
-<h3>LBYCPG3 SocialNet App - Profile Manager</h3>
+<h3>LBYCPG3 SocialNet - Profile Manager</h3>
 </header>
 
-<div id="app-wrapper">
-
-<main class="container-fluid py-3">
+<div class="container-fluid py-3">
 <div class="row g-3">
 
-<!-- LEFT PANEL -->
+<!-- LEFT -->
 <div class="col-md-4">
 <div class="panel">
 
 <h6 class="panel-title">Profile Management</h6>
 
 <div class="input-group mb-2">
-<input type="text" id="input-name" class="form-control" placeholder="Enter full name">
+<input id="input-name" class="form-control" placeholder="Enter full name">
 <button id="btn-add" class="btn btn-primary">Add</button>
 </div>
 
 <div class="input-group mb-2">
-<input type="text" id="input-search" class="form-control" placeholder="Search name">
-<button id="btn-lookup" class="btn btn-outline-primary">Look Up</button>
+<input id="input-search" class="form-control" placeholder="Search name">
+<button id="btn-lookup" class="btn btn-outline-primary">Lookup</button>
 </div>
 
 <button id="btn-delete" class="btn btn-danger w-100 mb-3">
@@ -52,7 +44,7 @@ Delete Selected Profile
 </div>
 </div>
 
-<!-- CENTER PANEL -->
+<!-- CENTER -->
 <div class="col-md-4">
 <div class="panel text-center">
 
@@ -67,9 +59,7 @@ width="96">
 
 <div id="profile-status" class="badge bg-primary mb-2">--</div>
 
-<blockquote id="profile-quote" class="fst-italic">
---
-</blockquote>
+<blockquote id="profile-quote" class="fst-italic">--</blockquote>
 
 <h6>Friends</h6>
 <div id="friends-list" class="list-group"></div>
@@ -77,29 +67,44 @@ width="96">
 </div>
 </div>
 
-<!-- RIGHT PANEL -->
+<!-- RIGHT -->
 <div class="col-md-4">
 <div class="panel">
 
 <h6 class="panel-title">Edit Profile</h6>
 
+<!-- STATUS -->
 <div class="input-group mb-3">
-<input type="text" id="input-status" class="form-control" placeholder="New status">
-<button id="btn-status" class="btn btn-primary">Change</button>
+<input id="input-status" class="form-control" placeholder="New status">
+<button id="btn-status" class="btn btn-primary">Update</button>
+</div>
+
+<!-- QUOTE -->
+<div class="input-group mb-3">
+<input id="input-quote" class="form-control" placeholder="Favorite quote">
+<button id="btn-quote" class="btn btn-primary">Update</button>
+</div>
+
+<!-- PICTURE -->
+<label class="small fw-semibold">Change Picture</label>
+
+<input type="file" id="input-file" class="form-control mb-2" accept="image/*">
+
+<input id="input-picture" class="form-control mb-2"
+placeholder="Paste image URL">
+
+<button id="btn-picture" class="btn btn-primary w-100 mb-3">
+Update Picture
+</button>
+
+<!-- FRIENDS -->
+<div class="input-group mb-3">
+<input id="input-friend" class="form-control" placeholder="Friend name">
+<button id="btn-add-friend" class="btn btn-success">Add</button>
 </div>
 
 <div class="input-group mb-3">
-<input type="text" id="input-picture" class="form-control" placeholder="Image path eg. resources\images\imagename.png">
-<button id="btn-picture" class="btn btn-secondary">Update</button>
-</div>
-
-<div class="input-group mb-3">
-<input type="text" id="input-friend" class="form-control" placeholder="Friend name">
-<button id="btn-add-friend" class="btn btn-success">Add Friend</button>
-</div>
-
-<div class="input-group mb-3">
-<input type="text" id="input-remove-friend" class="form-control" placeholder="Friend name">
+<input id="input-remove-friend" class="form-control" placeholder="Friend name">
 <button id="btn-remove-friend" class="btn btn-warning">Remove</button>
 </div>
 
@@ -107,15 +112,12 @@ width="96">
 </div>
 
 </div>
-</main>
+</div>
 
 <footer id="status-bar">
 <span id="status-message">Ready.</span>
 </footer>
 
-</div>
-
 <script src="js/app.js"></script>
-
 </body>
 </html>
