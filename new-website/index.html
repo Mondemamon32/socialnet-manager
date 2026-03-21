@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raymond Bool | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Raymond.dev</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto align-items-center">
+
+<li><a class="nav-link" href="#about">About</a></li>
+<li><a class="nav-link" href="#projects">Projects</a></li>
+<li><a class="nav-link" href="#works">Works</a></li>
+<li><a class="nav-link" href="#skills">Skills</a></li>
+<li><a class="nav-link" href="#contact">Contact</a></li>
+
+<!-- CLOCK -->
+<li class="ms-3 text-white small text-end">
+<div id="greeting"></div>
+<div id="clock"></div>
+</li>
+
+<!-- DARK MODE -->
+<li class="ms-3">
+<button class="btn btn-outline-light btn-sm" onclick="toggleTheme()">🌙</button>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center d-flex align-items-center">
+<div class="container" data-aos="fade-up">
+
+<img src="assets/images/profile.png" class="profile-img mb-4" alt="Profile">
+
+<h1 class="display-3 fw-bold gradient-text">Raymond Jean L. Bool</h1>
+<p class="lead">Computer Engineer • Cybersecurity • Networking</p>
+
+<a href="#projects" class="btn btn-primary m-2">View Work</a>
+<a href="#contact" class="btn btn-outline-light m-2">Hire Me</a>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+<div class="container">
+<div class="row">
+
+<div class="col-md-6">
+<h2>About Me</h2>
+<p>Hello! My name is Raymond Jean L. Bool.</p>
+<p>I am a Computer Engineering student at De La Salle University.</p>
+<p>I am interested in networking, cybersecurity, and web development.</p>
+
+<h4>Goals</h4>
+<p>To become a Network and Security Analyst.</p>
+</div>
+
+<div class="col-md-6">
+<h2>Education</h2>
+<p><b>DLSU</b> (2023–Present)</p>
+<p><b>Pasig Catholic College</b> (2021–2023)</p>
+<p><b>St. Paul Makati</b> (2011–2021)</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-5 bg-body-secondary">
+<div class="container">
+<h2 class="text-center mb-5">Projects</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card glass h-100">
+<div class="card-body">
+<h5>Portfolio Website</h5>
+<p>Bootstrap portfolio</p>
+<a href="https://github.com/Mondemamon32/socialnet-manager/tree/main/Portfolio" target="_blank" class="btn btn-primary btn-sm">GitHub</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card glass h-100">
+<div class="card-body">
+<h5>Bank Queue System</h5>
+<p>Java queue simulation</p>
+<a href="https://github.com/Mondemamon32/socialnet-manager/tree/main/Portfolio" target="_blank" class="btn btn-primary btn-sm">GitHub</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card glass h-100">
+<div class="card-body">
+<h5>Recipe System</h5>
+<p>Data structures project</p>
+<a href="https://github.com/Mondemamon32/socialnet-manager/tree/main/Portfolio" target="_blank" class="btn btn-primary btn-sm">GitHub</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- WORKS -->
+<section id="works" class="py-5 text-center">
+<div class="container">
+<h2>Interactive Work</h2>
+<button class="btn btn-warning mt-3" onclick="openBall()">Open Interactive Ball</button>
+</div>
+</section>
+
+<div id="ballModal">
+<span class="close-btn" onclick="closeBall()">✖</span>
+<div id="ball"></div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills" class="py-5">
+<div class="container">
+<h2 class="text-center mb-4">Skills</h2>
+
+<div class="mb-3">
+<label>HTML/CSS</label>
+<div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+</div>
+
+<div class="mb-3">
+<label>Java</label>
+<div class="progress"><div class="progress-bar bg-success" style="width:85%"></div></div>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<!-- EXPERIENCE -->
+<section class="py-5 bg-body-secondary">
+<div class="container">
+
+<h2 class="text-center mb-4">Experience</h2>
+
+<div class="row">
+
+<!-- INTERNSHIP -->
+<div class="col-md-6 mb-4">
+<h4>Internship - Computer Engineer</h4>
+<p><b>Company:</b> Nvidia</p>
+<p><b>Year:</b> 2025</p>
+
+<ul>
+<li>Provided technical support and troubleshooting</li>
+<li>Assisted in design and development of hardware systems</li>
+<li>Helped maintain computer hardware and software systems</li>
+</ul>
+</div>
+
+<!-- STUDENT DEV -->
+<div class="col-md-6 mb-4">
+<h4>Student Project Developer</h4>
+<p><b>School:</b> De La Salle University</p>
+<p><b>Year:</b> 2024 - 2026</p>
+
+<ul>
+<li>Created Java applications using stacks, queues, trees</li>
+<li>Developed HTML websites with forms and navigation</li>
+<li>Worked with group projects and documentation</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- REFERENCES -->
+<!-- REFERENCES -->
+<section class="py-5">
+<div class="container">
+
+<h2 class="text-center mb-4">References</h2>
+
+<div class="row">
+
+<!-- REF 1 -->
+<div class="col-md-4 mb-4">
+<h5>Engr. Carlos M. Reyes</h5>
+<p><b>Position:</b> Senior Network Engineer</p>
+<p><b>Company:</b> Nvidia</p>
+<p><b>Email:</b> carlos.reyes@gmail.com</p>
+</div>
+
+<!-- REF 2 -->
+<div class="col-md-4 mb-4">
+<h5>Ms. Angela D. Santos</h5>
+<p><b>Position:</b> Computer Engineer Supervisor</p>
+<p><b>Company:</b> Nvidia</p>
+<p><b>Email:</b> angela.santos@gmail.com</p>
+</div>
+
+<!-- REF 3 -->
+<div class="col-md-4 mb-4">
+<h5>Mr. John Patrick Lim</h5>
+<p><b>Position:</b> Software Developer</p>
+<p><b>Company:</b> Nvidia</p>
+<p><b>Email:</b> john.lim@gmail.com</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- RESUME -->
+<section class="py-5 bg-body-secondary text-center">
+<div class="container">
+<h2>Resume</h2>
+<a href="resume.html" target="_blank" class="btn btn-primary">View Resume</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+<div class="container">
+<h2 class="text-center">Contact Me</h2>
+
+<form action="https://formsubmit.co/raymond_bool@dlsu.edu.ph" method="POST">
+<input type="hidden" name="_captcha" value="false">
+
+<input class="form-control mb-3" name="name" placeholder="Name" required>
+<input class="form-control mb-3" name="email" placeholder="Email" required>
+<textarea class="form-control mb-3" name="message" placeholder="Message" required></textarea>
+
+<button class="btn btn-primary">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer class="text-center p-3">
+<p>© 2026 Raymond Bool</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
