@@ -1,3 +1,10 @@
+:root {
+  --primary: #2563EB;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
 body {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
